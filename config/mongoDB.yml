@@ -1,0 +1,24 @@
+Default: &defaults
+  user: LAB4
+  password: LAB4
+  host: localhost
+  database: LAB4
+  connections: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: LAB4_test
+  <<: *defaults
+
+Staging:
+  database: LAB4_staging
+  connections: 100
+  <<: *defaults
+
+Production:
+  database: LAB4_production
+  connections: 100
+  host: localhost
+  <<: *defaults
